@@ -1,4 +1,5 @@
 // Copyright 2026 Digital Clever Solution LLC
+// SPDX-License-Identifier: Apache-2.0
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -45,7 +46,7 @@ func CommitteeVoteKey(v *types.CommitteeVote) [32]byte {
 	}
 	bits := bitfield.Bitlist(v.AggregationBits)
 	var buf [24]byte
-	binary.LittleEndian.PutUint64(buf[0:8], uint64(bits.Len()))
+	binary.LittleEndian.PutUint64(buf[0:8], bits.Len())
 	binary.LittleEndian.PutUint64(buf[8:16], uint64(v.Slot))
 	binary.LittleEndian.PutUint64(buf[16:24], uint64(v.Index))
 	return sha256.Sum256(buf[:])
