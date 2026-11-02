@@ -1,4 +1,5 @@
 // Copyright 2026 Digital Clever Solution LLC
+// SPDX-License-Identifier: Apache-2.0
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -400,7 +401,8 @@ func appendBlockVotingAtt(votes []*types.BlockVoting, att iface.Attestation, isB
 			if isBlockVotingForkSlot {
 				bv.Votes = helpers.AddAggregateCommitteeVote(bv.Votes, newVote)
 			} else {
-				bv.Votes = helpers.AggregateCommitteeVote(append(bv.Votes, newVote))
+				// Pre-fork slots keep the legacy aggregation to preserve consensus.
+				bv.Votes = helpers.AggregateCommitteeVote(append(bv.Votes, newVote)) //nolint:staticcheck // SA1019: required before the block voting fork slot
 			}
 			break
 		}
