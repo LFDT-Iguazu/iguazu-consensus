@@ -1,5 +1,9 @@
 # iguazu-consensus
 
+![GitHub License](https://img.shields.io/github/license/LFDT-Iguazu/iguazu-consensus)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/LFDT-Iguazu/iguazu-consensus/badge)](https://scorecard.dev/viewer/?uri=github.com/LFDT-Iguazu/iguazu-consensus)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/16197/badge)](https://www.bestpractices.dev/projects/16197)
+
 Apache 2.0 Go library with the Iguazu consensus logic (DAG consensus, prevote, spine, block voting, deposits, withdrawals, fork choice scoring).
 
 Part of the Iguazu protocol separation effort: extracts the Iguazu-specific consensus code out of the Prysm-based coordinator (GPL-3.0) into a clean, reusable Apache 2.0 module. The library has no Prysm/coordinator imports and operates on abstract interfaces (`iface.BeaconState`, `iface.ExecutionEngine`, `iface.ForkChoice`, ...), so it can be consumed both in-process by the coordinator and by the `iguazu-coordinator` sidecar.
@@ -13,6 +17,24 @@ Part of the Iguazu protocol separation effort: extracts the Iguazu-specific cons
 - Fork choice scoring (optimistic spines)
 - Consensus and prevote helpers
 - Shared types and interfaces (depends on `iguazu-types`)
+
+## Releases
+
+Releases are published as [GitHub Releases](https://github.com/LFDT-Iguazu/iguazu-consensus/releases) with signed provenance;
+see [RELEASE.md](RELEASE.md) for the process and how to verify them, and [CHANGELOG.md](CHANGELOG.md)
+for the changes. Use the module with:
+
+```shell
+go get github.com/LFDT-Iguazu/iguazu-consensus@latest
+```
+
+## Documentation
+
+API documentation is available on [pkg.go.dev](https://pkg.go.dev/github.com/LFDT-Iguazu/iguazu-consensus).
+
+## Adopters
+
+If you use Iguazu, please add yourself to [ADOPTERS.md](ADOPTERS.md).
 
 ## Contributing
 
