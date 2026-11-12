@@ -3,8 +3,13 @@
 Release notes for every version are published with its
 [GitHub Release](https://github.com/LFDT-Iguazu/iguazu-consensus/releases).
 
-## Unreleased
+## v0.2.0
 
+### Changed
+
+- Requires Go 1.26 (`go 1.26.0`, toolchain `go1.26.11`); modules depending on `iguazu-consensus` must use Go 1.26 or later.
+- Depends on `iguazu-types` v0.3.0 instead of the retracted v0.1.0.
+- Dependencies updated to versions with known security fixes: `golang.org/x/crypto` v0.59.0, `golang.org/x/sys` v0.50.0.
 
 ### Added
 
