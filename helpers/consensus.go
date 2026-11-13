@@ -97,7 +97,7 @@ func ProcessWithdrawalOps(bState iface.BeaconState, cfg *Config, preFinRoot []by
 					upWops = make([]*types.WithdrawalOp, 0, len(val.WithdrawalOps)-1)
 				}
 				slog.Info("WithdrawalOps transition: rm stale (epoch proc)",
-					"rm", !(wop.Slot >= minSlot),
+					"rm", wop.Slot < minSlot,
 					"bState.Slot", fmt.Sprintf("%d", bState.Slot()),
 					"w.Slot", fmt.Sprintf("%d", wop.Slot),
 					"w.Amount", fmt.Sprintf("%d", wop.Amount),
