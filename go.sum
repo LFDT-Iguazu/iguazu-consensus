@@ -1,5 +1,5 @@
-github.com/LFDT-Iguazu/iguazu-types v0.3.0 h1:5mxeNQlc3w/uIkl0txEwhiJv7XO2wXoqEEa9FA1ahq8=
-github.com/LFDT-Iguazu/iguazu-types v0.3.0/go.mod h1:XwBRjyqT0VfjR1CvoXcr/YsM/1LRcYagaEat+CM4Cus=
+github.com/LFDT-Iguazu/iguazu-types v0.4.0 h1:1jH/J2X2XvL8F/5wUBaPNRZDH4Arf3eZr/ys8zr1kMw=
+github.com/LFDT-Iguazu/iguazu-types v0.4.0/go.mod h1:KcFhgWk5lK28DJOBnfBAP8q2Ulih2+9DUxbSvIPb+eo=
 github.com/patrickmn/go-cache v2.1.0+incompatible h1:HRMgzkcYKYpi3C8ajMPV8OFXaaRUnok+kx1WdO15EQc=
 github.com/patrickmn/go-cache v2.1.0+incompatible/go.mod h1:3Qf8kWWT7OJRJbdiICTKqZju1ZixQ/KpMGzzAfe6+WQ=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
